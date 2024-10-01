@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{694ac929-c8f2-4a6b-8427-bf6d2c24d6c6}</ProjectGuid>
-    <RootNamespace>TP1FelixLaprise</RootNamespace>
+    <ProjectGuid>{fb74f87d-4421-43cb-966f-233b816c0163}</ProjectGuid>
+    <RootNamespace>cours4</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\fichiersSourceTP1\Date.cpp" />
-    <ClCompile Include="..\..\fichiersSourceTP1\Personne.cpp" />
-    <ClCompile Include="TP1_FelixLaprise.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\fichiersSourceTP1\Date.h" />
-    <ClInclude Include="..\..\fichiersSourceTP1\Personne.h" />
+    <ClCompile Include="cours4.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
