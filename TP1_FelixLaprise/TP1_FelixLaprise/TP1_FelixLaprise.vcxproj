@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\fichiersSourceTP1\Date.cpp" />
     <ClCompile Include="..\..\fichiersSourceTP1\Personne.cpp" />
-    <ClCompile Include="TP1_FelixLaprise.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\fichiersSourceTP1\Date.h" />
