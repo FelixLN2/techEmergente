@@ -129,32 +129,6 @@ int minus4(int nb) {
 int dollar() {
     int ways = 0;
 
-    int dollar = 100;
-    int fiver = 5;
-    int tenner = 10;
-    int quarter = 25;
-
-
-    int i = 20;
-    while (i != 0) {
-        if(dollar / (i*fiver))
-    }
-
-
-
-
-
-
-
-
-    cout << "1 dollar = 20 x 5 cents" << endl;
-    cout << "1 dollar = 18 x5 cents 1 x 10 cents" << endl;
-    cout << "1 dollar = 16 x 5 cents 2 x 10 cents" << endl;
-    cout << "1 dollar = 15 x 5 cents 1 x 25 cents" << endl;
-    cout << "1 dollar = 14 x 5 cents 3 x 10 cents" << endl;
-    cout << "1 dollar = 13 x 5 cents 1 x 25 cents 1 x 10 cents" << endl;
-    cout << "1 dollar = 12 x 5 cents 4 x 10 cents" << endl;
-    cout << "1 dollar = "
 
     return ways;
 
