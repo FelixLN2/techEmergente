@@ -128,14 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\fichiersSourceTP1\Date.cpp" />
-    <ClCompile Include="..\..\fichiersSourceTP1\Personne.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test-Date.cpp" />
     <ClCompile Include="test-Personne.cpp" />
+    <ClCompile Include="Personne.cpp" />
+    <ClCompile Include="Personne.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\fichiersSourceTP1\Date.h" />
-    <ClInclude Include="..\..\fichiersSourceTP1\Personne.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

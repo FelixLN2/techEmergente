@@ -1,22 +1,30 @@
-#ifndef PERSONNE_H
-#define PERSONNE_H
+#ifndef _classePersonne_H
+#define _classePersonne_H
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "Date.h"
+
+
 using namespace std;
 
-#include "Date.h"
 
 class Personne {
 private:
-    std::string nom;
-    std::string prenom;
+    string nom;
+    string prenom;
     char sexe;
-    Date date;  
+    Date date;
 
 public:
     Personne();
+    Personne(string nom, string prenom, char sexe);
+    friend ostream& operator<<(ostream& os, const Personne& p);
+
+    friend istream& operator>>(istream& is, Personne& personne);
+
     void afficher();
 };
 
 #endif
+
