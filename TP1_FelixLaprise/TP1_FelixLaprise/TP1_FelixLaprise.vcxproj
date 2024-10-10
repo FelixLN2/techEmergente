@@ -130,6 +130,8 @@
     <ClCompile Include="..\..\fichiersSourceTP1\Date.cpp" />
     <ClCompile Include="..\..\fichiersSourceTP1\Personne.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="test-Date.cpp" />
+    <ClCompile Include="test-Personne.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\fichiersSourceTP1\Date.h" />

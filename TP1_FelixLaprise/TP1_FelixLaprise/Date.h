@@ -10,11 +10,11 @@ private:
     int valide(int, int, int);
 
 public:
-    Date();  
+    Date();
     Date(int jour, int mois, int annee);
 
     void affiche();
-    bool modifier(int jour, int mois, int annee); 
+    bool modifier(int jour, int mois, int annee);
 };
 
 #endif

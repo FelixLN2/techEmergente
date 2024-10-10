@@ -20,12 +20,12 @@ Date::Date(int jour, int mois, int annee) {
     }
 }
 Date::Date() : jour(6), mois(10), annee(2023) {
-    
+
 }
 
 
 
-int Date::valide(int jour, int mois, int annee) {
+int Date::valide(int j, int m, int a) {
 
     if (annee < 0 || annee > 9999) {
         return false;

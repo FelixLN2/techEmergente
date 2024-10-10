@@ -3,19 +3,28 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-using namespace std; 
-
 #include "Date.h"
 
-class Personne {
-	protected:
-      string nom;
-      string prenom;
-      char sexe;
-      Date naissance;
-   public:
-      
 
+using namespace std; 
+
+
+class Personne {
+private:
+    string nom;
+    string prenom;
+    char sexe;
+    Date date;
+
+public:
+    Personne();
+    Personne(string nom, string prenom, char sexe);
+    friend ostream& operator<<(ostream& os, const Personne& p);
+
+    friend istream& operator>>(istream& is, Personne& personne);  
+
+    void afficher();
 };
 
 #endif
+
