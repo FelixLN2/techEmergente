@@ -2,7 +2,7 @@
 #include "Date.h"
 
 using namespace std;
-/*
+
 int main() {
  
     cout << "Test du constructeur par défaut :" << endl;
@@ -54,4 +54,3 @@ int main() {
   
     return 0;
 }
-*/

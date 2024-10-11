@@ -1,41 +1,15 @@
 #include "Compagnie.h"
 #include <iostream>
-#include <string>;
+#include <string>
 #include <sstream>
 #include <fstream>
 using namespace std;
-//int main()
-//{
-//    string nomFichier;
-//    ifstream fichier;
-//    ofstream fichierSortie;
-//
-//    fichierSortie.open("sortie.txt");
-//
-//    cout << "Entrez un nom de fichier: " << endl;
-//
-//    fichier.open("test.txt");
-//    if (!fichier) {
-//        cerr << "Fichier introuvable" << endl;
-//        return -1;
-//    }
-//
-//    string motLu;
-//    while (fichier >> motLu) {
-//
-//        fichierSortie << motLu << endl;
-//    }
-//
-//    fichierSortie.close();
-//    fichier.close();
-//    return 0;
-//
-//}
+
 Compagnie::Compagnie(string nomCompagnie) {
-	cout << "Constructeur a trois arguments de Compagnie" << endl;
+	
 	this->nombreEmployesActuel = 0;
 	this->nombreEmployesMax = 30;
-	this->tableauEmployes = new Employe[nombreEmployesActuel];
+	this->tableauEmployes = new Employe[nombreEmployesMax];
 	this->nomCompagnie = nomCompagnie;
 }
 void Compagnie::afficher()
@@ -47,48 +21,58 @@ void Compagnie::afficher()
 bool Compagnie::lireFichier(const string nomFichier) {
 
 	ifstream fichier(nomFichier);
-	ofstream fichierSortie;
+	
 
 	string line;
 	int i = 0;
+
+	if (!fichier.is_open()) {
+		cerr << "Erreur : Impossible d'ouvrir le fichier." << endl;
+		return false;
+	}
+
 	
 	while (getline(fichier, line) && i < 2) {
 		istringstream iss(line);
-		string nom, prenom, poste, sDate;
-		char sexe;
-		double salaire;
+		string nom="", prenom = "", poste = "", sDate = "";
+		char sexe=0;
+		double salaire=0;
 
-		// Assuming the format is: nom;prenom;sexe;poste;salaire;date
+		
 		getline(iss, nom, ';');
 		getline(iss, prenom, ';');
 		iss >> sexe;
-		iss.ignore(); // Ignore the separator
+		iss.ignore(); 
 		getline(iss, poste, ';');
 		iss >> salaire;
-		iss.ignore(); // Ignore the separator
+		iss.ignore(); 
 		getline(iss, sDate, ';');
 
 
 
 		istringstream ss(sDate);
 		string temp;
+
 		int aDate[3];
 		int index = 0;
+
 		while (getline(ss, temp, '/') && index < 3) {
 			aDate[index] = stoi(temp);
 			index++;
 		}
+
 		Date date(aDate[0], aDate[1], aDate[2]);
 
-		Employe temp(nom, prenom, sexe, poste, salaire, date);
+		Employe tempE(nom, prenom, sexe, poste, salaire, date);
+		
 		
 
-		this->tableauEmployes[this->nombreEmployesActuel];
-		
+		this->tableauEmployes[this->nombreEmployesActuel] = tempE;
+	
 		this->nombreEmployesActuel++;
+		
 
-
-		i++;
+		i++; 
 	}
 
 
@@ -96,6 +80,14 @@ bool Compagnie::lireFichier(const string nomFichier) {
 	fichier.close();
 
 	return 0;
+}
+
+
+
+
+Compagnie::~Compagnie() {
+	this->nombreEmployesActuel = 0;
+	delete[] tableauEmployes; 
 }
 
 ostream& operator<<(ostream& os, const Compagnie& compagnie) {

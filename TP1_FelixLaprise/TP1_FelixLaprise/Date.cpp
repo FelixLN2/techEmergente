@@ -6,14 +6,14 @@ using namespace std;
 
 
 Date::Date(int jour, int mois, int annee) {
-    cout << "Constructeur a trois arguments de Date" << endl;
+    
     if (valide(jour, mois, annee)) {
         this->jour = jour;
         this->mois = mois;
         this->annee = annee;
     }
     else {
-        cout << "Date non valide. Utilisation des valeurs par défaut." << endl;
+      
         this->jour = 6;
         this->mois = 10;
         this->annee = 2023;

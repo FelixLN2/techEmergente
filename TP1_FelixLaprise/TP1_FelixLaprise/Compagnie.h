@@ -21,7 +21,7 @@ public:
     bool lireFichier(const string nomFichier);
     void afficher();
     friend ostream& operator<<(ostream& os, const Compagnie& compagnie);
-
+    ~Compagnie();
 };
 
 #endif
