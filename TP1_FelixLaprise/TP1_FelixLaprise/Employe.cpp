@@ -23,7 +23,7 @@ Employe::Employe(const string& nom, const string& prenom, const char& sexe,const
 }
 
 void Employe::afficher() {
-    cout << "Poste : " << poste << " Salaire : " << salaire << " Date d'embauche : ";
+    cout << static_cast<Personne&>(*this) << ", Poste : " << poste << " Salaire : " << salaire << " Date d'embauche : ";
     dateEmbauche.affiche();
     cout << endl;
 }

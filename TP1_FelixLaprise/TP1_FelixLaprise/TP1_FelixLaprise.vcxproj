@@ -127,19 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\fichiersSourceTP1\Date.cpp" />
     <ClCompile Include="Compagnie.cpp" />
     <ClCompile Include="Compagnie.h" />
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="Employe.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test-Date.cpp" />
+    <ClCompile Include="test-Employe.cpp" />
     <ClCompile Include="test-Personne.cpp" />
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="Personne.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\fichiersSourceTP1\Date.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="Employe.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
