@@ -5,7 +5,7 @@
 using namespace std;
 
 Personne::Personne() {
-    cout << "Constructeur a quatre arguments de Personne" << endl;
+    
     nom = "John";
     prenom = "Doe";
     sexe = 'M';
@@ -20,13 +20,14 @@ Personne::Personne(string nom, string prenom, char sexe) {
 }
 
 void Personne::afficher() {
-    cout << *this << endl;
+    cout << nom << " " << prenom << "," << sexe << endl;
     date.affiche();
-    cout << " 26 mars 2018" << endl;
+    
+    
 }
 
-ostream& operator<<(ostream& os, const Personne& p) {
-    os << "Nom: " << p.nom << ", Prénom: " << p.prenom << ", Sexe: " << p.sexe;
+ostream& operator<<(ostream& os, const Personne& personne){
+    os << "Nom: " << personne.nom << ", Prénom: " << personne.prenom << ", Sexe: " << personne.sexe;
     return os;
 }
 
@@ -37,6 +38,8 @@ istream& operator>>(istream& is, Personne& personne) {
     is >> personne.prenom;
     cout << "Entrez le sexe (M/F): ";
     is >> personne.sexe;
+
+   
 
 
 

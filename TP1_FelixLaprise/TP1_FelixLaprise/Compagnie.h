@@ -13,7 +13,7 @@ private:
     Employe* tableauEmployes;
     int nombreEmployesActuel;
     int nombreMaxEmployes;
-    string nomCompagnie; 
+    string nomCompagnie;
 public:
     Compagnie();
 

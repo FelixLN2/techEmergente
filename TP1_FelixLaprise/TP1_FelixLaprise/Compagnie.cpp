@@ -31,13 +31,13 @@ using namespace std;
 //
 //}
 Compagnie::Compagnie() {
-cout << "Constructeur a trois arguments de Compagnie" << endl;
- nombreEmployesActuel=23;
- nombreMaxEmployes=30;
-string nomCompagnie="bipbip";
+	cout << "Constructeur a trois arguments de Compagnie" << endl;
+	nombreEmployesActuel = 23;
+	nombreMaxEmployes = 30;
+	string nomCompagnie = "bipbip";
 }
 void Compagnie::afficher()
 {
 	cout << nomCompagnie << " a " << nombreEmployesActuel << " d'employes" << endl;
-	
+
 }

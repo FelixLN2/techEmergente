@@ -19,8 +19,8 @@ private:
 public:
     Personne();
     Personne(string nom, string prenom, char sexe);
-    friend ostream& operator<<(ostream& os, const Personne& p);
-
+    friend ostream& operator<<(ostream& os, const Personne& personne);
+    
     friend istream& operator>>(istream& is, Personne& personne);
 
     void afficher();

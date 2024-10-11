@@ -17,9 +17,13 @@ private:
 public:
 	Employe();
 	Employe(const string& poste, const double& salaire, const Date& dateEmbauche);
-	Employe(const string& nom, const string& prenom, const char& sexe, const Date& naissance, const string& poste, const double& salaire, const Date& dateEmbauche);
+
+	Employe(const string& nom, const string& prenom, const char& sexe, const string& poste, const double& salaire, const Date& dateEmbauche);
 	void afficher();
 
+	friend ostream& operator<<(ostream& os, const Employe& employe);
+
+	friend istream& operator>>(istream& is, Employe& employe);
 };
 
 #endif

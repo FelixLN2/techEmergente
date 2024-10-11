@@ -1,6 +1,6 @@
 #ifndef _classeDate_H
 #define _classeDate_H
-
+#include <sstream>
 #include <iostream>
 #include <string> 
 
@@ -10,11 +10,12 @@ private:
     int valide(int, int, int);
 
 public:
-    Date();
+    Date();  
     Date(int jour, int mois, int annee);
 
     void affiche();
-    bool modifier(int jour, int mois, int annee);
+    bool modifier(int jour, int mois, int annee); 
+    string getDate() const;
 };
 
 #endif

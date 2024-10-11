@@ -20,12 +20,12 @@ Date::Date(int jour, int mois, int annee) {
     }
 }
 Date::Date() : jour(6), mois(10), annee(2023) {
-
+    
 }
 
 
 
-int Date::valide(int j, int m, int a) {
+int Date::valide(int jour, int mois, int annee) {
 
     if (annee < 0 || annee > 9999) {
         return false;
@@ -58,7 +58,8 @@ int Date::valide(int j, int m, int a) {
 }
 
 void Date::affiche() {
-    cout << jour << "/" << mois << "/" << annee << "    Jour/Mois/Annee" << endl;
+    string date = to_string(jour) + "/" + to_string(mois) + "|" + to_string(annee) + "    Jour/Mois/Annee";
+    cout << date << endl;
 }
 
 bool Date::modifier(int jour, int mois, int annee)
@@ -74,4 +75,8 @@ bool Date::modifier(int jour, int mois, int annee)
         cout << "Nouvelle date non valide. Aucune modification n'a été effectuée." << endl;
         return false;
     }
+}
+
+string Date::getDate() const { 
+    return to_string(jour) + "/" + to_string(mois) + "/" + to_string(annee);
 }

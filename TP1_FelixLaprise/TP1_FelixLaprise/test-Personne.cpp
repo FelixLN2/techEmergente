@@ -8,14 +8,25 @@ int main() {
 
     cout << "Test du constructeur par défaut :" << endl;
     Personne guy;
+    cout << endl << endl;
     cout << "Afficher avec fonction afficher()" << endl;
     guy.afficher();
+    cout << endl << endl;
     cout << "Afficher avec << " << endl;
     cout << guy << endl;
 
+
+    cout << "Test du cosntructeur avec 3 arguments : " << endl;
+    Personne dude("Jean", "Jon", 'M');
+    cout << endl << endl;
+    cout << "Afficher avec fonction afficher()" << endl;
+    dude.afficher();
+    cout << endl << endl;
+    cout << "Afficher avec << " << endl;
+    cout << dude << endl;
     
 
-    cout << "--------------" << endl << endl;
+  /*  cout << "--------------" << endl << endl;
 
     cout << "Test du constructeur avec des arguments valides (15/8/2022) :" << endl;
     Date date2(15, 8, 2024);
@@ -56,7 +67,7 @@ int main() {
     cout << endl;
     cout << "Test de la méthode modifier avec une année invalide (1/11/10000) :" << endl;
     date2.modifier(45, 11, 2020);
-    date2.affiche();
+    date2.affiche();*/
 
     return 0;
 }

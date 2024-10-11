@@ -1,6 +1,6 @@
 #ifndef _classeDate_H
 #define _classeDate_H
-
+#include <sstream>
 #include <iostream>
 #include <string> 
 
@@ -15,6 +15,7 @@ public:
 
     void affiche();
     bool modifier(int jour, int mois, int annee); 
+    //string getDate() const;
 };
 
 #endif

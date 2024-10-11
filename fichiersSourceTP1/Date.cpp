@@ -58,7 +58,8 @@ int Date::valide(int jour, int mois, int annee) {
 }
 
 void Date::affiche() {
-    cout << jour << "/" << mois << "/" << annee << "    Jour/Mois/Annee" << endl;
+    string date = to_string(jour) + "/" + to_string(mois) + "|" + to_string(annee) + "    Jour/Mois/Annee";
+    cout << date << endl;
 }
 
 bool Date::modifier(int jour, int mois, int annee)
@@ -75,3 +76,7 @@ bool Date::modifier(int jour, int mois, int annee)
         return false;
     }
 }
+
+//string Date::getDate() const {
+//    return to_string(jour) + "/" + to_string(mois) + "/" + to_string(annee);
+//}
