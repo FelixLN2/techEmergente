@@ -12,15 +12,15 @@ private:
 
     Employe* tableauEmployes;
     int nombreEmployesActuel;
-    int nombreMaxEmployes;
+    int nombreEmployesMax;
     string nomCompagnie;
 public:
-    Compagnie();
+    Compagnie(string nomCompagnie);
 
     Compagnie(const string nomCompagnie, int nombreMaxEmployes, int nombreEmployesActuel = 0);
     bool lireFichier(const string nomFichier);
     void afficher();
-
+    friend ostream& operator<<(ostream& os, const Compagnie& compagnie);
 
 };
 
